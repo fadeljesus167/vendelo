@@ -5,7 +5,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select '.product', 2
+    assert_select '.product', 3
   end
 
   test 'render a detail product page' do
@@ -29,7 +29,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       product: {
         title: 'Nintendo 64',
         description: 'Seminuevo',
-        price: 80
+        price: 80,
+        category_id: categories(:videogames).id
       }
     }
 
@@ -81,5 +82,14 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     }
 
     assert_response :unprocessable_entity
+  end
+
+  test 'can delete a product' do
+    assert_difference('Product.count', -1) do
+      delete product_path(products(:ps4))
+    end
+
+    assert_redirected_to products_path
+    assert_equal flash[:notice], 'Tu producto se ha eliminado correctamente'
   end
 end
