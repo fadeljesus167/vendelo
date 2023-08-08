@@ -1,14 +1,22 @@
 en:
   appname: Sellit
+  meta_title: Buy and sell
   activerecord:
     models:
       product: Product
+      user: User
     attributes:
       product:
         title: Title
         description: Description
         price: Price
         photo: Photo
+        user:
+          required: required
+      user:
+        email: Email
+        username: Username
+        password: Password
     errors:
       models:
         product:
@@ -19,13 +27,30 @@ en:
               blank: can't be blank
             price:
               blank: can't be blank
+            user:
+              required: requerido
+        user:
+          attributes:
+            username:
+              too_long: can't be too long
+              invalid: is invalid
   common:
     confirm: Are you sure?
     back: Go back
+    not_logged_in: You hace to login or create an account
   shared:
     header:
       new_product: Add product
       categories: Categories
+  authentication:
+    users:
+      create:
+        created: Your account has been created
+    sessions:
+      create:
+        created: Welcome!
+        failed: Invalid login
+      
   products:
     show:
       edit: Edit product

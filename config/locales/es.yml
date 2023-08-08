@@ -1,14 +1,21 @@
 es:
   appname: Vendelo
+  meta_title: Compra y vende
   activerecord:
     models:
       product: Producto
+      user: Usuario
     attributes:
       product:
         title: Titulo
         description: Descripcion
         price: Precio
         photo: Foto
+        user: Usuario
+      user:
+        email: Email
+        username: Nombre de usuario
+        password: Contraseña
     errors:
       models:
         product:
@@ -19,6 +26,13 @@ es:
               blank: no puede estar vacio
             price:
               blank: no puede estar vacio
+            user:
+              required: requerido
+        user:
+          attributes:
+            username:
+              too_long: tiene demasiados caracteres
+              invalid: es invalido
   shared:
     header:
       new_product: Agregar producto
@@ -26,6 +40,15 @@ es:
   common:
     confirm: Estas seguro?
     back: Ir atras
+    not_logged_in: Tienes que iniciar sesion o crear una cuenta
+  authentication:
+    users:
+      create:
+        created: Tu cuenta se ha creado
+    sessions:
+      create:
+        created: Bienvenido!
+        failed: Inicio de sesion invalido
   products:
     show:
       edit: Editar producto
