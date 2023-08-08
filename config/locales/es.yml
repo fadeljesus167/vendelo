@@ -36,6 +36,14 @@ es:
       title: Nuevo producto
     index:
       title: Productos
+      new: Agregar categoria
+      all: Todos
+      min_price: Precio minimo
+      max_price: Precio maximo
+      query_text: Escribe para buscar
+      newest: Agregados recientemente
+      expensive: Mas caros
+      cheapest: Mas baratos
     create:
       created: Tu producto se ha creado correctamente
     update:

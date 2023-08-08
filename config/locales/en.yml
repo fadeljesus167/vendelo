@@ -49,6 +49,13 @@ en:
     index:
       title: Categories
       new: Add category
+      all: All
+      min_price: Min price
+      max_price: Max price
+      query_text: What do you want to search?
+      newest: Recently added
+      expensive: Expensive first
+      cheapest: Cheapest first
     edit:
       title: Edit category
     new:
