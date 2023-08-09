@@ -44,6 +44,8 @@ es:
     confirm: Estas seguro?
     back: Ir atras
     not_logged_in: Tienes que iniciar sesion o crear una cuenta
+    not_authorized: No tienes permisos para esta accion
+    not_found: Not found
   authentication:
     users:
       create:
@@ -52,12 +54,13 @@ es:
       create:
         created: Bienvenido!
         failed: Inicio de sesion invalido
-        destroy:
-          destroyed: Bye
+      destroy:
+        destroyed: Bye
   products:
     show:
       edit: Editar producto
       delete: Eliminar producto
+      view_more_products: 'Ver mas productos de %{username}'
     edit:
       title: Editar producto
     new:

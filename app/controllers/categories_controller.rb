@@ -1,20 +1,17 @@
 class CategoriesController < ApplicationController
-  # GET /categories or /categories.json
+  before_action :authorize!
   def index
     @categories = Category.all
   end
 
-  # GET /categories/new
   def new
     @category = Category.new
   end
 
-  # GET /categories/1/edit
   def edit
     category
   end
 
-  # POST /categories or /categories.json
   def create
     @category = Category.new(category_params)
 
@@ -25,7 +22,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /categories/1 or /categories/1.json
   def update
     if category.update(category_params)
       redirect_to categories_url, notice: t('.updated')
@@ -34,7 +30,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # DELETE /categories/1 or /categories/1.json
   def destroy
     category.destroy
 
@@ -42,12 +37,10 @@ class CategoriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def category
       @category = Category.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def category_params
       params.require(:category).permit(:name)
     end

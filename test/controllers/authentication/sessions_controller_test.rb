@@ -18,15 +18,15 @@ class Authentication::SessionsControllerTest < ActionDispatch::IntegrationTest
   test "should login a user by username" do
     post sessions_url, params: { login: @user.username, password: 'testme'}
 
-    assert_redirected_to products_path
+    assert_redirected_to products_url
   end
 
   test "should logout" do
     login
 
-    delete sessions_url(@user.id)
+    delete session_url(@user.id)
 
-    assert_redirected_to products_path
+    assert_redirected_to products_url
     assert_equal flash[:notice], "Bye"
   end
 end

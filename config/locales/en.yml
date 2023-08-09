@@ -38,6 +38,8 @@ en:
     confirm: Are you sure?
     back: Go back
     not_logged_in: You hace to login or create an account
+    not_authorized: You dont have permissions for this action
+    not_found: Not found
   shared:
     header:
       new_product: Add product
@@ -59,6 +61,7 @@ en:
     show:
       edit: Edit product
       delete: Delete product
+      view_more_products: 'View more products of %{username}'
     edit:
       title: Edit product
     new:
