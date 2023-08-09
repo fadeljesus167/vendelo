@@ -42,6 +42,9 @@ en:
     header:
       new_product: Add product
       categories: Categories
+      login: Login
+      register: Register
+      logout: Logout
   authentication:
     users:
       create:
@@ -50,7 +53,8 @@ en:
       create:
         created: Welcome!
         failed: Invalid login
-      
+      destroy:
+        destroyed: Bye
   products:
     show:
       edit: Edit product

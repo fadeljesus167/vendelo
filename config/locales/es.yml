@@ -37,6 +37,9 @@ es:
     header:
       new_product: Agregar producto
       categories: Categorias
+      login: Inicia sesion
+      register: Registrate
+      logout: Salir
   common:
     confirm: Estas seguro?
     back: Ir atras
@@ -49,6 +52,8 @@ es:
       create:
         created: Bienvenido!
         failed: Inicio de sesion invalido
+        destroy:
+          destroyed: Bye
   products:
     show:
       edit: Editar producto

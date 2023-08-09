@@ -20,4 +20,13 @@ class Authentication::SessionsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to products_path
   end
+
+  test "should logout" do
+    login
+
+    delete sessions_url(@user.id)
+
+    assert_redirected_to products_path
+    assert_equal flash[:notice], "Bye"
+  end
 end
