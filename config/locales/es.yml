@@ -34,12 +34,13 @@ es:
               too_long: tiene demasiados caracteres
               invalid: es invalido
   shared:
-    header:
-      new_product: Agregar producto
+    items:
+      new_product: Nuevo producto
       categories: Categorias
       login: Inicia sesion
       register: Registrate
       logout: Salir
+      favorites: Favoritos
   common:
     confirm: Estas seguro?
     back: Ir atras
@@ -65,6 +66,12 @@ es:
       title: Editar producto
     new:
       title: Nuevo producto
+    form:
+      title_placeholder: '¿Qué quieres vender?'
+      description_placeholder: '¿Puedes describir el producto?'
+      price_placeholder: '¿Cuánto cuesta?'
+      category_placeholder: '¿En qué categoría encaja mejor?'
+      submit: 'Véndelo!'
     index:
       title: Productos
       new: Agregar categoria
@@ -98,3 +105,10 @@ es:
       updated: La categoria se ha actualizado correctamente
     destroy:
       destroyed: La categoria se ha eliminado correctamente
+  favorites:
+    index:
+      title: Mis favoritos
+  user_mailer:
+    welcome:
+      subject: 'Bienvenido a Vendelo'
+      welcome_message: 'Hey %{username}, bienvenid@ a Vendelo. Esperemos que vendas un montón!'

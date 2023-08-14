@@ -53,10 +53,10 @@ class ProductsController < ApplicationController
   end
 
   def products_filter_params
-    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page)
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favorites, :user_id)
   end
 
   def product
-    @product = Product.find_by(id: params[:id])
+    @product ||= Product.find_by(id: params[:id])
   end
 end

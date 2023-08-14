@@ -41,12 +41,13 @@ en:
     not_authorized: You dont have permissions for this action
     not_found: Not found
   shared:
-    header:
+    items:
       new_product: Add product
       categories: Categories
       login: Login
       register: Register
       logout: Logout
+      favorites: Favorites
   authentication:
     users:
       create:
@@ -66,6 +67,12 @@ en:
       title: Edit product
     new:
       title: New product
+    form:
+      title_placeholder: 'What do you want to sell?'
+      description_placeholder: 'Could you describe your product?'
+      price_placeholder: 'For how much?'
+      category_placeholder: 'In what category could fit better?'
+      submit: 'Sell it now!'
     index:
       title: Products
     create:
@@ -98,4 +105,10 @@ en:
       updated: Category has been updated successfully
     destroy:
       destroyed: Category has been deleted successfully
-    
+  favorites:
+    index:
+      title: My favorites
+  user_mailer:
+    welcome:
+      subject: 'Welcome to SellIT'
+      welcome_message: 'Hey %{username}, welcome to SellIT. We hope you sell a lot!'

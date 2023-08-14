@@ -9,7 +9,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.product', 12
-    assert_select '.category', 9
+    assert_select '.category', 10
   end
 
   test 'render a list of products filtered by category' do
@@ -17,7 +17,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.product', 5
-    assert_select '.category', 9
+    assert_select '.category', 10
   end
 
   test 'render a list of products filtered by min_price and max_price' do
@@ -33,7 +33,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.product', 1
-    assert_select '.category', 9
+    assert_select '.category', 10
   end
 
   test 'sort products by expensive prices first' do
