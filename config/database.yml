@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: vendelo_production
-  username: vendelo
-  password: <%= ENV["VENDELO_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
