@@ -1,9 +1,0 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-paco_swtich:
-  user: paco
-  product: switch
-
-maria_driver:
-  user: maria
-  product: driver2
